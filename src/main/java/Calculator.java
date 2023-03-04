@@ -49,7 +49,12 @@ class Calculator {
             n1=n2;
             n2=n3;
         }
-        return n2;
+        if (n == 0) {
+            return 0;
+        } else if(n == 1 || n == 2) {
+            return 1;
+        }
+        return n1;
     }
 
 
@@ -75,7 +80,7 @@ class Calculator {
     String createUniqueID(String n){
         UUID uuid = UUID.randomUUID();
         String uuidString = uuid.toString();
-        return uuidString;
+        return n + uuidString;
     }
 
 
